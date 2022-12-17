@@ -11,9 +11,9 @@ export default function Home() {
       </Head>
 
       <main>
-	<h1 className="title">
-	  Read <Link href="/posts/post">this page!</Link>
-	</h1>
+        <h1 className="title">
+          Read <Link href="/posts/post">this page!</Link>
+        </h1>
 
 
         <p className={styles.description}>
@@ -64,7 +64,7 @@ export default function Home() {
 
       <style jsx>{`
         main {
-          padding: 5rem 0;
+          padding: 10rem 0;
           flex: 1;
           display: flex;
           flex-direction: column;
@@ -74,28 +74,27 @@ export default function Home() {
         footer {
           width: 100%;
           height: 100px;
-          border-top: 1px solid #eaeaea;
+          border-top: 1px solid teal;
           display: flex;
           justify-content: center;
           align-items: center;
         }
         footer img {
-          margin-left: 0.5rem;
+          margin-left: 0.3rem;
         }
         footer a {
           display: flex;
           justify-content: center;
           align-items: center;
-          text-decoration: none;
-          color: inherit;
+          text-decoration: underline;
+          color: teal;
         }
         code {
-          background: #fafafa;
+          background: darkorange;
           border-radius: 5px;
           padding: 0.75rem;
           font-size: 1.1rem;
-          font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-            DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+          font-family: Menlo, Monaco;
         }
       `}</style>
 
