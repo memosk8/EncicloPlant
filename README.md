@@ -32,3 +32,15 @@ Sin embargo, es imperativo tener un control de cada una de las consultas guardad
         </tr>
     </tbody>
 </table>
+
+### Modelo orientado a documentos NoSql para «mongodb»
+
+<pre>
+{
+    id: ObjectId(),
+    create_at: DateTime(),
+    updated_at: DateTime(),
+    common_name: String,
+    official_name: String
+}
+</pre>
