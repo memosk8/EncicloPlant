@@ -9,7 +9,7 @@ export default function FirstPost() {
       <Head>
         <title>First Post</title>
       </Head>
-{/*       <Script
+      {/* <Script
         src="https://connect.facebook.net/en_US/sdk.js"
         strategy="lazyOnload"
         onLoad={() =>
