@@ -14,57 +14,55 @@ El modelo de datos se tendrà que adaptar a los tipos de respuestas de las disti
 
 Sin embargo, es imperativo tener un control de cada una de las consultas guardadas por lo que se considera el siguiente modelo de datos para almacenar las búsquedas en la base de datos mongodb:
 
-<br>
-<table align="center" border="2px" >
-  <thead>
-    <tr style="font-weight: 600; color: black; background-color: white; text-align: center;">
-      <td>id</td>
-      <td>created_at</td>
-      <td>updated_at</td>
-      <td>common_name</td>
-      <td>official_name</td>
-    </tr>
-  </thead>
-  <tbody style="background-color: gray;">
-    <tr style="color: lightgreen; text-decoration: overline; cursor: pointer">
-      <td><span> ObjectId </span></td>
-      <td><span> DateTime </span></td>
-      <td><span> DateTime </span></td>
-      <td><span> String </span></td>
-      <td><span> String </span></td>
-    </tr>
-  </tbody>
-</table>
-<br>
-
 ### Modelo orientado a documentos NoSql para _mongodb_
 
-<table align="center" bgcolor="darkgreen">
+<hr>
+<table align="center" bgcolor="green" style="width: min-content">
 <thead>
 <th><h3>Planta</h3></th>
 <th><h3>Usuario</h3></th>
+<th><h3>Búsqueda</h3></th>
 </thead>
 <tr>
 <!-- Planta -->
 <td><pre>
 {
-  id: ObjectId(),
-  create_at: DateTime(),
-  updated_at: DateTime(),
-  common_name: String,
-  official_name: String
+  id: <a href="https://www.mongodb.com/docs/manual/reference/method/ObjectId/">ObjectId</a>, 
+  create_at: <span style="font-weight: bold; ">DateTime</span>, 
+  updated_at: <span style="font-weight: bold; ">DateTime</span>, 
+  common_name: <span style="font-weight: bold; ">String</span>, 
+  official_name: <span style="font-weight: bold; ">String</span>
+  family: <span style="font-weight: bold; ">String</span>, 
+  history: <span style="font-weight: bold; ">String</span>, 
+  botanic_prop: [...<span style="font-weight: bold; ">String</span>], 
+  habitat: <span style="font-weight: bold; ">String</span>, 
+  human_use: [...<span style="font-weight: bold; ">String</span>], 
+  img_link: <span style="font-weight: bold; ">String</span>
 }
 </pre></td>
 <!-- Usuario -->
+<td><pre id="usuario">
+{
+  id: ObjectId(), 
+  create_at: <span style="font-weight: bold; ">DateTime</span>, 
+  updated_at: <span style="font-weight: bold; ">DateTime</span>, 
+  user_name: <span style="font-weight: bold; ">String</span>, 
+  email: <span style="font-weight: bold; ">String</span>, 
+  password: Hashed_pwd, 
+  searches: [Search]
+}
+</pre></td>
+<!-- Busqueda -->
 <td><pre>
 {
-  id: ObjectId(),
-  create_at: DateTime(),
-  updated_at: DateTime(),
-  user_name: String,
-  email: String,
-  password: Hashed_pwd
+  id: ObjectId(), 
+  create_at: <span style="font-weight: bold; ">DateTime</span>, 
+  user: <a href="#usuario">id_usuario</a>, 
+  email: <span style="font-weight: bold; ">String</span>, 
+  password: Hashed_pwd, 
+  searches: [Search]
 }
 </pre></td>
 </tr>
 </table>
+<hr>
