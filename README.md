@@ -17,27 +17,29 @@ Sin embargo, es imperativo tener un control de cada una de las consultas guardad
 ### Modelo orientado a documentos NoSql para _mongodb_
 
 <hr>
-<table align="center" bgcolor="green" style="width: min-content">
-<thead>
-<th><h3>Planta</h3></th>
-<th><h3>Usuario</h3></th>
-<th><h3>Búsqueda</h3></th>
+<table align="center" style="width: max-content; color: black; ">
+<thead style="border: 2px dotted gray">
+<tr style="background-color: lightgreen; color: black; ">
+<th ><h3 >Planta</h3></th>
+<th ><h3 >Usuario</h3></th>
+<th ><h3 >Búsqueda</h3></th>
+</tr>
 </thead>
 <tr>
 <!-- Planta -->
-<td><pre>
+<td><pre id="planta">
 {
-  id: <a href="https://www.mongodb.com/docs/manual/reference/method/ObjectId/">ObjectId</a>, 
-  create_at: <span style="font-weight: bold; ">DateTime</span>, 
-  updated_at: <span style="font-weight: bold; ">DateTime</span>, 
-  common_name: <span style="font-weight: bold; ">String</span>, 
-  official_name: <span style="font-weight: bold; ">String</span>
-  family: <span style="font-weight: bold; ">String</span>, 
-  history: <span style="font-weight: bold; ">String</span>, 
-  botanic_prop: [...<span style="font-weight: bold; ">String</span>], 
-  habitat: <span style="font-weight: bold; ">String</span>, 
-  human_use: [...<span style="font-weight: bold; ">String</span>], 
-  img_link: <span style="font-weight: bold; ">String</span>
+  id: <a href="https://www.mongodb.com/docs/manual/reference/method/ObjectId/" target="_blank">ObjectId</a>, 
+  create_at: <span style="font-weight: bold;"> DateTime </span>, 
+  updated_at: <span style="font-weight: bold;"> DateTime </span>, 
+  common_name: <span style="font-weight: bold;"> String </span>, 
+  official_name: <span style="font-weight: bold;"> String </span>
+  family: <span style="font-weight: bold;"> String </span>, 
+  history: <span style="font-weight: bold;"> String </span>, 
+  botanic_prop: [...<span style="font-weight: bold;"> String </span>], 
+  habitat: <span style="font-weight: bold;"> String </span>, 
+  human_use: [...<span style="font-weight: bold;"> String </span>], 
+  img_link: <span style="font-weight: bold;"> String </span>
 }
 </pre></td>
 <!-- Usuario -->
@@ -53,7 +55,7 @@ Sin embargo, es imperativo tener un control de cada una de las consultas guardad
 }
 </pre></td>
 <!-- Busqueda -->
-<td><pre>
+<td><pre id="busqueda">
 {
   id: ObjectId(), 
   create_at: <span style="font-weight: bold; ">DateTime</span>, 
@@ -64,5 +66,6 @@ Sin embargo, es imperativo tener un control de cada una de las consultas guardad
 }
 </pre></td>
 </tr>
+
 </table>
 <hr>
