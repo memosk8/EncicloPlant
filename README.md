@@ -15,9 +15,9 @@ El modelo de datos se tendrà que adaptar a los tipos de respuestas de las disti
 Sin embargo, es imperativo tener un control de cada una de las consultas guardadas por lo que se considera el siguiente modelo de datos para almacenar las búsquedas en la base de datos mongodb:
 
 <br>
-<table align="center" border="2px">
+<table align="center" border="2px" >
   <thead>
-    <tr style="font-weight: 600; color: darkGreen; text-align: center">
+    <tr style="font-weight: 600; color: black; background-color: white; text-align: center;">
       <td>id</td>
       <td>created_at</td>
       <td>updated_at</td>
@@ -25,11 +25,13 @@ Sin embargo, es imperativo tener un control de cada una de las consultas guardad
       <td>official_name</td>
     </tr>
   </thead>
-  <tbody>
-    <tr>
-      <td><a href="#"> >ObjectId </a></td>
-      <td><a href="#"> >DateTime </a></td>
-      <td><a href="#"> >DateTime </a></td>
+  <tbody style="background-color: gray;">
+    <tr style="color: lightgreen; text-decoration: overline; cursor: pointer">
+      <td><span> ObjectId </span></td>
+      <td><span> DateTime </span></td>
+      <td><span> DateTime </span></td>
+      <td><span> String </span></td>
+      <td><span> String </span></td>
     </tr>
   </tbody>
 </table>
@@ -37,12 +39,13 @@ Sin embargo, es imperativo tener un control de cada una de las consultas guardad
 
 ### Modelo orientado a documentos NoSql para _mongodb_
 
-<table>
+<table align="center" bgcolor="darkgreen">
 <thead>
-  <th><h3>Planta</h3></th>
-  <th><h3>Usuario</h3></th>
+<th><h3>Planta</h3></th>
+<th><h3>Usuario</h3></th>
 </thead>
 <tr>
+<!-- Planta -->
 <td><pre>
 {
   id: ObjectId(),
@@ -52,7 +55,7 @@ Sin embargo, es imperativo tener un control de cada una de las consultas guardad
   official_name: String
 }
 </pre></td>
-
+<!-- Usuario -->
 <td><pre>
 {
   id: ObjectId(),
@@ -63,6 +66,5 @@ Sin embargo, es imperativo tener un control de cada una de las consultas guardad
   password: Hashed_pwd
 }
 </pre></td>
-
 </tr>
 </table>
