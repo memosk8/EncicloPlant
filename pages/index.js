@@ -1,10 +1,12 @@
 import Head from 'next/head';
-import Layout, { siteTitle } from '../components/layout';
+import Image from 'next/image';
+import {Layout, siteTitle } from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
 
 export default function Home() {
   return (
     <Layout home>
+      <Image src='/images/profile.jpg' width="350px" height="300px"/>
       <Head>
         <title>{siteTitle}</title>
       </Head>
